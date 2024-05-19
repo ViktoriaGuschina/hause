@@ -7,6 +7,15 @@ public class RadioTest {
     Radio radio = new Radio();
 
     @Test
+    public void radioConstructorTest() {
+        Radio radio1 = new Radio(15);
+        int expected = 15;
+        int actual = radio1.getRadioStationNumbers();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void shouldSetNumberRadioStation() {
 
         radio.setCurrentRadioStationNumber(6);
